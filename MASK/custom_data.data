@@ -1,0 +1,5 @@
+classes = 2
+train = /content/drive/MyDrive/ColabNotebooks/MASK/train.txt
+valid = /content/drive/MyDrive/ColabNotebooks/MASK/test.txt
+names = /content/drive/MyDrive/ColabNotebooks/MASK/classes.names
+backup = backup
