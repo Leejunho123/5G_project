@@ -1,7 +1,7 @@
 ## RobotControl
 - RobotControl
     + 파이썬 프로그래밍 (주 업무)
-    + Python3 version : 3.7
+    + Python3 version : 3.7.3
     + Python3 idle
 
 - wowwow
