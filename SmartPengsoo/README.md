@@ -2,6 +2,7 @@
 - 프로그램 설명
     + 음성인식을 통한 스마트펭수 제어
     + Python3 version : 3.7
+    + Python3 idle
     + Command : 각종 명령어 정리
     + MongoDB : MongoDB에 데이터 전송
     + spshi : 펭수 양팔 모터 제어
