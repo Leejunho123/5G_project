@@ -12,4 +12,6 @@
 - Server
     + Google cloud firebase
 
+- 라즈베리파이3
+
 - pdf : https://github.com/Leejunho123/project/blob/main/RobotControl/RobotControl.pdf
