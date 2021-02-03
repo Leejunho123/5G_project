@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal|center_vertical">
+
+    <Button
+        android:id="@+id/cctv"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Home CCTV"
+        android:drawableLeft="@drawable/icon"
+        android:paddingLeft="20dp"
+        android:background="@drawable/background"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/playing"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="playing"
+        android:drawableLeft="@drawable/icon_3"
+        android:paddingLeft="20dp"
+
+        android:background="@drawable/background"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/move"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="robot control"
+        android:drawableLeft="@drawable/icon_2"
+        android:paddingLeft="15dp"
+
+        android:background="@drawable/background"/>
+
+</LinearLayout>
