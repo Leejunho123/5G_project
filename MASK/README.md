@@ -1,6 +1,6 @@
 ## yolov3를 이용한 마스크 착용/미착용 여부 판단
 - 프로그램 설명
-    + Python3 version : 3.7
+    + Python3 version : 3.7.3
     + yolov3 coding and training : google colab
     + other : visual studio code
     + 시작프로그램에 auto_start.bat을 이동
