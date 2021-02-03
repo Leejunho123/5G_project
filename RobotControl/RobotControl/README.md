@@ -17,5 +17,4 @@
         + 머리쪽 위/아래, 왼/오 서보모터 2개 제어
     + VoiceMode : 음성모드 변경
         + 음성으로 로봇 제어
-    + pdf : https://github.com/Leejunho123/project/blob/main/RobotControl/RobotControl.pdf
 
