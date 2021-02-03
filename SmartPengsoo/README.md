@@ -14,3 +14,5 @@
 
 - Server : MongoDB
     + 다른 라즈베리파이에 MongoDB 설정 후 연결
+
+- 라즈베리파이 3
