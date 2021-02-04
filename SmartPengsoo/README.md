@@ -3,7 +3,7 @@
     + 기간 : 10일
     + 참여인원 : 4
     + 팀 내 업무 : 펭수 main 프로그램, 음성인식 및 얼굴인식, 프로그램 모듈 연결
-    + 사용언어
+    + 사용 언어 및 라이브러리
         + Python3 version : 3.7.3
         + Python3 idle
         + 추가 라이브러리 : SpeechRecognition, pymongo, pygame, cv2, numpy

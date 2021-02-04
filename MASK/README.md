@@ -3,7 +3,7 @@
     + 기간 : 2주
     + 참여인원 : 2
     + 팀 내 업무 : image labeling, modeling (2인이라 전반적인 업무를 동시에 함)
-    + 사용 언어
+    + 사용 언어 및 라이브러리
         + Python3 version : 3.7.3
         + yolov3 coding and training : google colab, darknet
         + other : visual studio code
