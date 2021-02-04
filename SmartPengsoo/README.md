@@ -9,7 +9,7 @@
     + spsmain : 펭수 main 프로그램, 음성인식 및 얼굴인식 (주 업무)
     + spsmusic : 노래 재생
     + ha : 얼굴, 몸 인식 라이브러리
-    + 추가 라이브러리 : 
+    + 추가 라이브러리 : SpeechRecognition, pymongo, pygame, cv2, numpy
     + pdf : https://github.com/Leejunho123/project/blob/main/SmartPengsoo/SmartPengsoo.pdf
     
 
