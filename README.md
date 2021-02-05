@@ -21,6 +21,8 @@
         1. 음성인식을 통한 인형 만들기
         2. 프로젝트 기간 : 10일
         3. 팀 내 업무 : 음성인식, 안면인식 프로그래밍, 각 모듈 연결
+        4. 상세 설명 : https://github.com/Leejunho123/5G_project/tree/main/SmartPengsoo
+        5. pdf : https://github.com/Leejunho123/project/blob/main/SmartPengsoo/SmartPengsoo.pdf
 
 - 안드로이드 어플리케이션, 안드로이드 앱으로 로봇 제어프로그램 완성
     + 기간 : 2020년 10월 28일 ~ 2020년 11월 25일
@@ -28,14 +30,26 @@
         1. 앱을 이용한 로봇 제어.
         2. 음성인식을 이용한 로봇 제어
         3. 프로젝트 기간 : 4주
-        4. 팀 내 업무 : 모터 제어, 음성 인식, mp3 재생, 파이썬 프로그래밍
-
+        4. 팀 내 업무 : 
+            + PM
+            + RobotControl(파이썬)
+                + 모터 제어 
+                + 음성 인식 
+                + mp3 재생 
+                + 전반적인 파이썬 프로그래밍
+        5. 상세 설명 : https://github.com/Leejunho123/5G_project/tree/main/RobotControl
+        6. pdf : https://github.com/Leejunho123/5G_project/blob/main/RobotControl/RobotControl/RobotControl.pdf
+        
 - 사물인식 딥러닝, OpenCV
     + 기간 : 2020년 11월 25일 ~ 2020년 12월 16일
     + 딥러닝 기초
     + 프로젝트 : 마스크 착용/미착용 여부 판단 (MASK) / 2인
         1. yolov3 이용
         2. 프로젝트 기간 : 4일
+        3. 팀 내 업무 : image labeling, modeling (2인이라 전반적인 업무를 동시에 함)
+        4. 상세 설명 : https://github.com/Leejunho123/5G_project/tree/main/MASK
+        5. pdf : https://github.com/Leejunho123/project/blob/main/MASK/MOFsystem.pdf
+        
 
 - Tensorflow 딥러닝
     + 기간 : 2020년 12월 24일, 29일, 30일
