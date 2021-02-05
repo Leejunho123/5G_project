@@ -2,7 +2,7 @@
 - 프로그램 설명
     + 기간 : 4주
     + 참여인원 : 4
-    + 팀 내 업무 : RobotControl
+    + 팀 내 업무 : PM, RobotControl
     + 사용 언어 및 라이브러리
         + Python3 version : 3.7.3
             + 추가 라이브러리 : google.cloud, SpeechRecognition, pygame, socket(TCP 통신)
