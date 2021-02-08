@@ -54,3 +54,6 @@
     + y_min : y_min
     + x_max : x_max
     + y_max : y_max
+    
++ dicom.py
+    + 기본 dicom 파일 jpg로 변환 및 라벨링 
