@@ -2,8 +2,8 @@
 
 
 + 히스토그램
-    + [hist.jpg] (hist.JPG)
-    + [hist2.jpg] (hist2.JPG)
+    + ![hist.jpg] (hist.JPG)
+    + ![hist2.jpg] (hist2.JPG)
 
 + 상위 3개, 하위 3개
     1. 0 Aortic enlargement 대동맥 증대 7162개
