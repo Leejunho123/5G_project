@@ -3,7 +3,7 @@
 
 + 히스토그램
 
-![hist](hist.JPG)
+![hist]
 ![hist2](hist2.JPG)
 
 + 상위 3개, 하위 3개
