@@ -54,6 +54,19 @@
     + y_min : y_min
     + x_max : x_max
     + y_max : y_max
+
+
+
+
+## git 설명
+- 
+    + dicom.py
+        + 기본 dicom 파일 jpg로 변환 및 라벨링 
+
+    + merge_width_hight.py
+        + width, hight를 합친 train_csv2 생성
     
-+ dicom.py
-    + 기본 dicom 파일 jpg로 변환 및 라벨링 
+    + yolo.ipynb
+        + train_csv2 와 이미지(.png)를 이용하여 colab 안에서 yolov5s train, detect
+        
+    
