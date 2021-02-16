@@ -70,3 +70,9 @@
         + train_csv2 와 이미지(.png)를 이용하여 colab 안에서 yolov5s train, detect
         
     
+    + yolo2.ipynb
+        + yolov5l
+    
+    + yolo3.ipynb
+        + yolov5s
+        + 5-Fold
