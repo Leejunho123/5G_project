@@ -1,0 +1,185 @@
+You Only Look Once: Unified, Real-Time Object Detection 1506
+
+DPM , R-CNN 등이 존재했던 시절 YOLO는 등장
+YOLO는 높은 정확도보다는 더 많은 양의 이미지를 처리할 수 있는 실시간 객체 탐지 (test 측정에 빠른속도)
+
+만든 사람
+조셉 레드몬
+C기반 Darknet 프레임워크 개발 및 yolov1 v2 v3 발표
+진행한 연구가 공익적 목적보다는 군사적, 개인정보 침해로 활용될 가능성이 커서 잠정적으로 연구를 중단
+
+
+
+Yolo
+앞서 YOLO는 빠르게 이미지에서 객체를 탐지하는 모델
+
+You Only Look Once: 이미지 전체를 단 한번만 본다.
+R-CNN 과 비교 
+R-CNN은 1장의 이미지를 여러 장으로 쪼개서 CNN 모델에 통과 : 수천 장의 이미지 소모
+YOLO : 단 1장
+R-CNN YOLO 시스템 사진
+Unified: 통합된 모델을 사용한다.
+다른 객체 탐지 모델 : 다양한 전처리 후 인공 신경망 
+YOLO : 단 하나의 인공 신경망 ( 모두 안에 내포) : 간단해 보임
+
+Real-time Object Detection: 실시간 객체 탐지
+초반
+Fast R-CNN이 0.5 FPS(초당 프레임 수)의 성능을 가진 반면에 YOLO는 45 FPS
+
+
+YOLO dataset
+이미지
+클래스 x_mid, y_mid, width, height
+
+SxS 개의 그리드 셀마다 클래스 정보와 예측된 바운딩 박스, Conf 가 주어진다.
+SxS 개의 그리드 셀 중에 물체의 중앙과 가장 가까운 셀이 객체를 탐지 역할을 함
+그리드 셀 사진
+바운딩 박스 
+x,y,width,height,conf
+conf는 바운딩 박스가 물체를 영역으로 잡고 있는지 클래스를 잘 예측하는지
+conf score = pr(object) * IOU
+
+바운딩 박스 안에 물체가 존재할 확률 * IOU
+
+Intersection over Union
+
+클래스 확률 
+바운딩 박스에 object가 존재할 때 클래스일 확률
+Pr(Class_i |Object) * Pr(Object) * IOU = Pr(Class_i) * IOU
+IOU 사진
+
+
+구조
+24 Convolutional Layer
+2 개의 Fully-Connected Layer
+Pre-trained Network, Training Network,  Reduction Layer 으로 구분
+
+YOLO 구조 사진
+Pre-trained Network
+GoogLeNet을 이용하여 ImageNet 1000-class dataset을 사전에 학습한 결과
+GoogLeNet 을 통과 시키고 난 후에
+Training Network 를 통과 ( 실제 training하는 모델)
+
+
+Loss Function
+
+3가지 원칙
+1. 이미지를 분류하는 classifier 문제를 바운딩 박스를 만드는 regression문제로 생각한다.
+2. 바운딩 박스를 잘 그렸는지 평가하는 Localization Error와 박스 안의 물체를 잘 분류했는지 평가하는 Classification Error의 패널티를 다르게 평가한다. 특히, 박스 안의 물체가 없는 경우에는 Confidence Score를 0으로 만들기 위해 Localization Error 에 더 높은 패널티를 부과한다.
+많은 바운딩 박스중에 IOU 수치가 가장 높게 생성된 바운딩 박스만 학습에 참여한다. 이는 바운딩 박스를 잘 만드는 셀은 더욱 학습을 잘하도록 높은 Confidence Score를 주고 나머지 셀은 바운딩 박스를 잘 만들지 못하더라도 나중에 Non-max suppression을 통해 최적화 하기 위함이다[6].
+
+NMS (non-maximum suppression)
+Non-Maximum suppression는 영상처리 분야에서 엣지(edge)를 얇게 만들어주는 것
+중심 픽셀을 기준으로 8방향의 픽셀 값들을 비교하여 중심픽셀이 가장 클 경우 그대로 두고 아닐 경우 제거해 주는 과정
+쉽게 말해서, 영상안의 edge가 뭉개져 있을때 더욱 선명한 선을 찾기 위해 수행하는 과정
+
+1. 동일한 객체에 대하여 IOU(Intersection Of Union)가 높은 순서대로 정렬한다.
+2. score가 가장 높은 경계상자를 기준으로 Threshold(0.5)를 설정하여 후보군을 줄인다.
+
+1. 적용
+Sum-Squared Error(SSD) Sum-Squared Differences
+
+Loss function 사진
+x,y,w,h 오차를 다 더하는 coord 로 5배의 가중치 (bounding box 오차를 중요하게 본다. 정확한 객체 위치 탐지)
+각 객체마다 IOU가 가장 높은 바운딩 박스인 경우에만 패널티를 부과해서 학습을 더 잘하도록 유도
+
+noob : 객체가 셀에 존재하지 않으면 배경으로 학습하지 않게 0.5로 패널티 낮춤
+마지막은 각 셀마다 클래스 오차
+
+
+YOLO v2 1612
+YOLO v2는 2017년 CVPR 컨퍼런스에서 “YOLO9000: Better, Faster, Stronger”라는 이름으로 논문이 발표되었다. YOLO v1이 20개의 이미지를 분류하는 모델을 소개했다면 v2는 논문 제목 그대로 무려 9000개의 이미지를 탐지하면서 분류할 수 있는 모델을 개발하였다. 또한 Batch Normalization, Direct Location Prediction, Multi-Scale Training기법을 도입해서 FPS와 mAP를 높였다. 이 때 논문이 발표될 당시만 하더라도 YOLO v2는 가장 빠르면서 정확한 모델이었다.
+
+
+YOLO v3 1804
+YOLO v3는 v2버전을 더욱 개량한 것이다. 현재는 거의 모든 영역에서 사용되는 ResNet의 Residual Block이 v2버전에서는 존재하지 않았다. 그래서 레이어 신경망 층이 최근에 나온 연구보다는 상대적으로 얇았는데, v3에서는 이 기법을 사용해서 106개의 신경망 층을 구성하였다.
+
+
+
+
+
+
+Yolov4 2004
+ 1-Stage Detector
+
+적용 기법
+
+Bag of Freebies
+학습에 관여하는 요소
+Data augmentation, Loss function, Regularization
+training cost를 증가시켜 정확도를 높이는 방법
+
+Data augmentation
+image의 일부 영역에 box를 생성하고 해당 영역을 0~255의 random한 값으로 채우는 Random erase, 0으로 채우는 CutOut, 두 image와 label을 alpha blending하는 MixUp, CutOut과 MixUp을 응용한 CutMix, Style-transfer GAN 등의 기법
+
+Regularization
+DropOut, DropPath, Spatial DropOut, DropBlock
+
+Loss function
+MSE, IoU, Generalized IoU, Complete IoU, Distance IoU
+
+
+
+Bag of Specials
+
+활성화 함수
+
+NMS
+
+개선 사항
+고질적인 문제인 작은 object
+input resolution을 크게 사용
+이미지 크기를 늘렸다
+
+layer , parameter 수 증가
+
+정확도 상승
+
+= 속도 감소
+CSPNet backbone 설계로 해결
+
+CSPNet
+무거운 inference cost를 완화시키며 정확도손실을 최소로 할 수 있는 Cross Statge Partial Network 구조 제안
+input feature map을 2개로 나눈 뒤 하나는 연산 없이 합쳐
+inference cost, memory cost 줄이기
+gradient flow를 나눠줘서 학습에 좋은 영향 = 정확도 손실이 적다고 주장
+
+Yolov4에서는 CSPNet 기반 CSPDarkNet53
+
+Yolov4 시스템 사진
+
+Yolov3 기반 backbone CSPDarkNet53
+Neck SPP Path Aggregation Network
+BoF BoS 적용
+
+
+Mosaic Augmentation (사진)
+4개의 이미지를 하나로 합치는 방식
+batch size가 4배로 커지는 것과 비슷한 효과
+small object에 대한 성능도 좋아질 수 있음
+
+Self_Adversarial Training
+adversarial attack을 주고 원래 박스로 다시 학습
+
+Modified SAM,PAN,CmBN
+
+Spatial Attention Module
+Path Aggregation Network
+Cross iteration-Batch Normalization
+
+AP 10% 증가, 실시간 최적화
+Single GPU로 학습, 테스트 모델 배포 가능
+
+
+Yolov5
+논문 없음
+
+nn.LeakyReLu 대신 nn.SiLU 사용
+SiLU 사진
+버그 픽스
+성능 소폭 향상
+
+
+
+
+

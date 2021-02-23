@@ -1,0 +1,48 @@
+EfficientNet 사진 
+
+EfficientNet 1905
+
+
+model Scaling
+
+일반적으로 모델의 정확도를 높일 때 모델 자체를 찾는 방법이 있다.
+하지만 기존 모델의 Complexity를 높이는 방법도 사용
+(모델의 길이, 깊이 등을 늘려 무거운 모델로 만드는 것)
+
+방법
+filter의 개수를 늘리는(or channel) width scaling
+layer의 개수를 depth scaling
+input image의 해상도를 높이는 resolution scaling
+
+ResNet : depth scaling (ResNet-50, ResNet-101)
+MoblieNet, ShuffleNet : width scaling (MoblieNet-224 1.0, MoblieNet-224 0.5)
+
+EfficientNet
+3가지 기법을 모두 사용
+각 기법 마다 나머지를 고정하고 1개의 scaling factor로 키워가며 정확도 측정
+
+Model scaling 사진들
+
+scaling factor 3가지를 모두 키워주는 것이 성능이 좋다.
+
+Input image 크기가 커지면 receptive field도 늘려야하고 더 커진 finegrained pattern을 학습하기위해 더 많은 channel이 필요하다. 당연한것
+즉 3가지 요소들을 동시에 고려하는 것이 맞다고 생각
+
+Compund Scaling
+3가지 요소들을 고려해야하는데 어떻게 최적화를 시킬 것인가
+논문에서는 모델을 고정하고 depth,width,resolution을 조절하는 방법을 제한
+하지만 이때 고정해야하는 모델이기 때문에 좋은 모델을 선정해야한다.
+
+실제 논문에서는 
+MnasNet과 거의 동일한 search space하에서 AutoML을 통해 모델을 탐색
+EfficientNet-B0
+
+3가지 factor를 조절해야하는데 이 때 각각의 비율은 조건을 만족시켜야한다.
+Compund 사진
+width, resolution에 제곱이 들어간 이유는 depth는 비례해서 증가하지만
+width, resolution은 제곱 배 증가하기떄문 (안에 연산 처리)
+EfficientNet의 알파, 베타, 감마 값은 간단한 grid search를 통해 구하는 방식을 제안하고 있으며, 처음 단계에서는 파이를 1로 고정한 뒤, 타겟 데이터셋에서 좋은 성능을 보이는 알파, 베타, 감마 값을 찾아냅니다. 본 논문에서는 알파 값은 1.2, 베타 값은 1.1, 감마 값은 1.15를 사용하였으며, 방금 구한 3개의 scaling factor는 고정한 뒤 파이를 키워주며 모델의 사이즈를 키워주고 있습니다.
+
+ImageNet 결과
+기존 ConvNet들에 비해 parameter 수와 FLOPS 수를 굉장히 많이 절약
+

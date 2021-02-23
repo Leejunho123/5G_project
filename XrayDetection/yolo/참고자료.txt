@@ -1,0 +1,45 @@
+Yolov5
+이론
+https://lv99.tistory.com/69
+https://medium.com/curg/you-only-look-once-%EB%8B%A4-%EB%8B%A8%EC%A7%80-%ED%95%9C-%EB%B2%88%EB%A7%8C-%EB%B3%B4%EC%95%98%EC%9D%84-%EB%BF%90%EC%9D%B4%EB%9D%BC%EA%B5%AC-bddc8e6238e2
+
+yolov4 논문
+https://arxiv.org/pdf/2004.10934.pdf
+
+yolov4 설명
+https://neverabandon.tistory.com/22
+https://hoya012.github.io/blog/yolov4/
+
+code
+https://www.kaggle.com/awsaf49/vinbigdata-cxr-ad-yolov5-14-class-train
+1024 png
+https://www.kaggle.com/xhlulu/vinbigdata-process-and-resize-to-png-1024x1024
+
+
+NMS(Non-Maximum suppression)
+https://go-hard.tistory.com/25
+
+1-Stage detector 2-Stage detector
+https://ganghee-lee.tistory.com/34
+
+receptive field
+https://m.blog.naver.com/PostView.nhn?blogId=sogangori&logNo=220952339643&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+SiLU
+https://pytorch.org/docs/stable/generated/torch.nn.SiLU.html
+
+Adversarial-Attack
+https://rain-bow.tistory.com/entry/Adversarial-Attack
+
+Efficientnet
+https://www.kaggle.com/solosquad1999/vinbigdata-train-efficientnet-2-classes
+
+K-Fold
+https://nonmeyet.tistory.com/entry/KFold-Cross-Validation%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%84%A4%EB%AA%85
+https://3months.tistory.com/321
+
+EfficientNet
+https://arxiv.org/pdf/1905.11946.pdf
+https://hoya012.github.io/blog/EfficientNet-review/
+
+

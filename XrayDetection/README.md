@@ -12,7 +12,7 @@
     + 성공하면 전문의에게 유용한 제2의 의견을 제시할 수 있다. 자동으로 소견을 정확하게 식별하고 위치를 지정해주는 시스템은 의사의 스트레스를 해소하고 정확한 진단을 제공할 수 있다.
 
 + Data
-
+    + 총 200GB의 dicom 이미지
     + Train : 15000
     + Test : 3000
     + 평가 방법 : mAP
@@ -56,6 +56,9 @@
     + y_max : y_max
 
 
++ 주 업무
+    + Yolov5 modeling
+    + EfficientNet 2-class classification
 
 
 ## git 설명
@@ -76,3 +79,8 @@
     + yolo3.ipynb
         + yolov5s
         + 5-Fold
+
+
+## Team github and trello 자세한 내용
++ https://trello.com/b/bUIob804/kaggle
++ https://github.com/X-Ray-Project/main
