@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>12간지 </title>
+</head>
+<body>
+<form action="/jiji" method="post" >
+    년도 입력:
+    <input type="text" name="year">
+    <input type="submit" value="표시">
+</form>
+    {% if jiji != "" %}
+    <img src="static\images\{{ jiji }}.png">
+        {{ jiji }}
+    {% endif %}
+
+
+</body>
+</html>

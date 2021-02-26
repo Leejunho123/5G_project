@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- action 은 가는 위치 post로 보내기-->
+<form action="/book_add_result" method="post" enctype="multipart/form-data">
+
+
+    <div class="form-group col col-lg-5"  >
+    <label for="title">제목</label>
+      <input name="title" type="text" placeholder="제목 입력" class="form-control"  aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+     <div class="form-group col col-lg-5"  >
+    <label for="photo">표지</label>
+      <input name="photo" type="file" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+    <div class="form-group col col-lg-5"  >
+    <label for="author">저자</label>
+      <input name="author" type="text" class="form-control" placeholder="저자 입력" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+    <div class="form-group col col-lg-5"  >
+    <label for="price">가격</label>
+      <input name="price" type="text" class="form-control" placeholder="가격 입력" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+     <div class="form-group col col-lg-5"  >
+    <label for="isbn">isbn</label>
+      <input name="isbn" type="text" class="form-control" placeholder="isbn 입력" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+    <div class="form-group col col-lg-5"  >
+
+     <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Button</button>
+    </div>
+</form>
+
+{% endblock %}

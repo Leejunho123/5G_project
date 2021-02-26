@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/lotto_result" method="post" enctype="multipart/form-data">
+
+    <div class="input-group mb-3" style="width: 600px">
+        <input name="1" type="text" style = "text-align:center;" class="form-control" placeholder="1번째" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="2" type="text" style = "text-align:center;" class="form-control" placeholder="2번째" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="3" type="text" style = "text-align:center;" class="form-control" placeholder="3번째" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="4" type="text" style = "text-align:center;" class="form-control" placeholder="4번째" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="5" type="text" style = "text-align:center;" class="form-control" placeholder="5번째" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="6" type="text" style = "text-align:center;" class="form-control" placeholder="6번째" aria-label="Example text with button addon" aria-describedby="button-addon1">
+
+    </div>
+    <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Button</button>
+</form>
+
+{% endblock %}

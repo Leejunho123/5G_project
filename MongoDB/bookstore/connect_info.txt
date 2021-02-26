@@ -1,0 +1,2 @@
+Atlas=mongodb+srv://Leejunho:shadownaix1@d0114cluster.qweii.mongodb.net/song-db?retryWrites=true&w=majority
+host=127.0.0.1:27017

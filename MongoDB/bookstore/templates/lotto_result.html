@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="input-group mb-3" style="width: 600px" >
+        <input name="1" value="{{ mylist[0] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="2" value="{{ mylist[1] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="3" value="{{ mylist[2] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="4" value="{{ mylist[3] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="5" value="{{ mylist[4] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="6" value="{{ mylist[5] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+    컴퓨터
+    <div class="input-group mb-3" style="width: 400px">
+        <input name="1" value="{{ com[0] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="2" value="{{ com[1] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="3" value="{{ com[2] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="4" value="{{ com[3] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="5" value="{{ com[4] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <input name="6" value="{{ com[5] }}" style = "text-align:center;" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+    {{ result }}개
+{% endblock %}
