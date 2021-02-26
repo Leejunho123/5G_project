@@ -4,7 +4,8 @@
 종료 날짜 : 2021, 03, 30 / 2021, 02, 26
 
 + 1차 발표 pdf : https://github.com/Leejunho123/5G_project/blob/main/XrayDetection/X_ray_detection_1%EC%B0%A8%EB%B0%9C%ED%91%9C.pdf
-+ 최종 발표 pdf : 
++ 최종 발표 pdf : https://github.com/Leejunho123/5G_project/blob/main/XrayDetection/X_ray_detection_%EC%B5%9C%EC%A2%85%EB%B0%9C%ED%91%9C.pdf
+
 + Overview
     + 팔이 부러졌을 때 방사선 전문의들이 도움을 준다. 의사들은 CT, PET 스캔, MRI, X-ray 와 같은 기법으로 진단하고 치료한다. 하지만 흉부 엑스레이 쪽에서 힘든 부분이 있다. 최고의 의사들도 흉부 엑스레이 해석이 힘들 수 있고, 오진을 할 수 있다. 컴퓨터 지원 감지 및 진단 시스템(CADe/CADx)는 의사들의 부담을 줄이고 열악한 지역의 진단 품질을 개선하는 데 도움이 될 것이다.
     + 기존의 흉부 엑스레이 해석하는 방법은 소견 목록으로 분류한다. 현재 이미지에는 이상점의 위치에 대한 정보가 없으므로 다른 결과가 초래할 수 있다. 의사들에게 의미있는 지원을 하기 위해 엑스레이에 소견을 표시하기 위한 해결책이 필요하다.
