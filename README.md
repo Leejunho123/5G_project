@@ -64,3 +64,10 @@
     + 기간 : 2021년 1월 14일 ~ 2021년 2월 1일
     + MongoDB, MongoDB Atlas 생성 및 접속
     + 웹크롤링 데이터 서버로 업로드 및 다운로드
+
+- Kaggle Competition VinBigData Chest X-ray Abnormalities Detection
+    + 기간 : 2021년 02월 08일 ~ 2021년 02월 26일 (3주)
+    + Yolov5, EfficientNet 이용
+    + 팀 내 업무 : Yolov5 modeling, EfficientNet, PPT 발표 (알고리즘 소개~)
+    + 상세 설명 : https://github.com/Leejunho123/5G_project/tree/main/XrayDetection
+    + pdf :  https://github.com/Leejunho123/5G_project/blob/main/XrayDetection/X_ray_detection_%EC%B5%9C%EC%A2%85%EB%B0%9C%ED%91%9C.pdf
