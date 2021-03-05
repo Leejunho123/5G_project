@@ -139,6 +139,7 @@ class Add(Function):
     return gy,gy
 
 def add(x0, x1):
+  x1 = as_array(x1)
   return Add()(x0,x1)
 
 class Square(Function):
@@ -164,6 +165,7 @@ class Mul(Function):
     return gy * x1, gy * x0
 
 def mul(x0, x1):
+  x1 = as_array(x1)
   return Mul()(x0,x1)
 
 class Neg(Function) :
