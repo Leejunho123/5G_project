@@ -28,7 +28,8 @@ def as_variable(obj):
   if isinstance(obj, Variable):
     return obj
   return Variable(obj)
-  class Variable:
+
+class Variable:
   __array_priority__ = 200
   def __init__(self, data, name = None) :
     if data is not None:
