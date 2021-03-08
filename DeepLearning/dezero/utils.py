@@ -48,7 +48,7 @@ def get_dot_graph(output, verbose= True):
       if x.creator is not None:
         add_func(x.creator)
 
-  return 'digrah g {\n' + txt + '}'
+  return 'digraph g {\n' + txt + '}'
 
 
 def plot_dot_graph(output, verbose=True, to_file='graph.png'):
