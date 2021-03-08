@@ -122,6 +122,7 @@ class Variable:
     p = str(self.data).replace('\n','\n'+' '*9)
     return 'variable(' + p + ')'
   
+  
   def sum(self, axis=None, keepdims=False):
     return dezero.functions.sum(self, axis, keepdims)
 
