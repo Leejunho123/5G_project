@@ -82,6 +82,7 @@ class Sum(Function):
   def forward(self, x):
     self.x_shape = x.shape
     y = x.sum(axis=self.axis, keepdims=self.keepdims)
+    return y
   
   def backward(self, gy):
     gy = utils.reshape_sum_backward(gy, self.x_shape, self.axis, self.keepdims)
