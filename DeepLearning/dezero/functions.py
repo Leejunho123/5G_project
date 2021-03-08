@@ -48,7 +48,7 @@ class Reshape(Function):
 
   def forward(self, x):
     self.x_shape = x.shape
-    y = x.reshaep(self.shape)
+    y = x.reshape(self.shape)
     return y
 
   def backward(self, gy):
