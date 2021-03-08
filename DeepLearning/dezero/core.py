@@ -73,9 +73,9 @@ class Variable:
             x.grad = x.grad + gx
           if x.creator is not None:
             add_func(x.creator)
-    if not retain_grad:
-      for y in f.outputs:
-        y().grad = None
+      if not retain_grad:
+        for y in f.outputs:
+          y().grad = None
   def cleargrad(self):
     self.grad = None
   @property
