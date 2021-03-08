@@ -88,8 +88,15 @@ class Variable:
 
   def transpose(self):
     return dezero.functions.transpose(self)
+
+  @property
+  def T(self):
+    return dezero.functions.transpose(self)
+
+
   def cleargrad(self):
     self.grad = None
+
   @property
   def shape(self):
     return self.data.shape
