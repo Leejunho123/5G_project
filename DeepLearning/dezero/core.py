@@ -46,7 +46,7 @@ class Variable:
   
   def backward(self, retain_grad=False, create_graph=False):
         if self.grad is None:
-            self.grad = Variable(xp.ones_like(self.data))
+            self.grad = Variable(np.ones_like(self.data))
 
         funcs = []
         seen_set = set()
