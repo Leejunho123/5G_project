@@ -21,7 +21,7 @@ class Cos(Function):
 
   def backward(self, gy):
     x, = self.inputs
-    gx = gy * sin(x)
+    gx = gy * -sin(x)
     return gx
 
 def cos(x):
