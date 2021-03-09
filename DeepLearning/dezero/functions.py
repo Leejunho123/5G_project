@@ -1,7 +1,9 @@
 import numpy as np
-from dezero.core import Function, as_variable
-from dezero import utils
 import dezero
+from dezero import utils
+from dezero.core import Function, Variable, as_variable
+
+
 
 class Exp(Function):
     def forward(self, x):
