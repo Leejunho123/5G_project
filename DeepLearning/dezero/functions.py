@@ -1,7 +1,7 @@
 import numpy as np
-from dezero.core import Function
-from dezero.core import as_variable
+from dezero.core import Function, as_variable
 from dezero import utils
+import dezero
 
 class Exp(Function):
     def forward(self, x):
@@ -221,9 +221,7 @@ def sigmoid_simple(x):
 
 class Sigmoid(Function):
   def forward(self, x):
-    x = -1*x
-    print(x)
-    y = 1 / (1 + np.exp(x))
+    y = 1 / (1 + np.exp(-x))
     return y
 
   def backward(self, gy):
