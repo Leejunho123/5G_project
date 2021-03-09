@@ -5,6 +5,7 @@ from dezero import utils
 
 class Exp(Function):
     def forward(self, x):
+        x = np.array(x)
         y = np.exp(x)
         return y
 
@@ -16,7 +17,7 @@ class Exp(Function):
 
 def exp(x):
     return Exp()(x)
-    
+
 class Sin(Function):
   def forward(self, x):
     y = np.sin(x)
