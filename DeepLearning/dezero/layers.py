@@ -15,7 +15,7 @@ class Layer:
 
   def __call__(self, *inputs):
     outputs = self.forward(*inputs)
-    if not isinstance(outputs, tupe):
+    if not isinstance(outputs, tuple):
       outputs = (outputs,)
     self.outputs = [weakref.ref(y) for y in outputs]
     return outputs if len(outputs) > 1 else outputs[0]
