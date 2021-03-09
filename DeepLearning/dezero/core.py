@@ -162,6 +162,7 @@ class Add(Function):
       gx0 = dezero.functions.sum_to(gx0, self.x0_shape)
       gx1 = dezero.functions.sum_to(gx1, self.x1_shape)
     return gx0, gx1  
+    
 
 def add(x0, x1):
   x1 = as_array(x1)
