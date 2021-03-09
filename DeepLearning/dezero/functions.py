@@ -224,7 +224,7 @@ def sigmoid_simple(x):
 
 class Sigmoid(Function):
     def forward(self, x):
-        x = x.float()
+        x.astype(np.float64)
         y = 1 / (1 + np.exp(-x))
         return y
 
