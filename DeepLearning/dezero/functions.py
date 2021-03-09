@@ -5,7 +5,6 @@ from dezero import utils
 
 class Exp(Function):
     def forward(self, x):
-        x = np.array(x)
         y = np.exp(x)
         return y
 
@@ -222,8 +221,7 @@ def sigmoid_simple(x):
 
 class Sigmoid(Function):
   def forward(self, x):
-    x = np.array(x)
-    y = 1 / (1 + np.exp(-x))
+    y = 1 / (1 + exp(-x))
     return y
 
   def backward(self, gy):
