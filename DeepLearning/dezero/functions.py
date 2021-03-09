@@ -202,13 +202,13 @@ def linear(x, W, b=None):
   
 def sigmoid_simple(x):
   x = as_variable(x)
-  y = 1 / (1 + exp(-x))
+  y = 1 / (1 + np.exp(-x))
   return y
 
 class Sigmoid(Function):
   def forward(self, x):
     x = as_variable(x)
-    y = 1 / (1 + exp(-x))
+    y = 1 / (1 + np.exp(-x))
     return y
 
   def backward(self, gy):
