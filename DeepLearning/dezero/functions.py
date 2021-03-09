@@ -152,7 +152,7 @@ def matmul(x, W):
   return MatMul()(x,W)
 
 
-def MeanSquaredError(Function):
+class MeanSquaredError(Function):
   def forward(self, x0, x1):
     diff = x0 - x1
     y = (diff ** 2).sum() / len(diff)
