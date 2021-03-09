@@ -294,3 +294,4 @@ def setup_variable():
 
 class Parameter(Variable):
   pass
+
