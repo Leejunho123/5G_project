@@ -34,7 +34,7 @@ class Layer:
 
 class Linear(Layer):
   def __init__(self, out_size, nobais = False, dtype = np.float32, in_size = None):
-    super().__init()
+    super().__init__()
     self.in_size = in_size
     self.out_size = out_size
     self.dtype = dtype
