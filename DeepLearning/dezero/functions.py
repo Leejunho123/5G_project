@@ -172,6 +172,7 @@ class MeanSquaredError(Function):
   def forward(self, x0, x1):
     diff = x0 - x1
     y = (diff ** 2).sum() / len(diff)
+    return y
   
   def backward(self, gy):
     x0, x1 = self.inputs
@@ -224,6 +225,7 @@ def sigmoid_simple(x):
 
 class Sigmoid(Function):
     def forward(self, x):
+      
         y = 1 / (1 + np.exp(-x))
         return y
 
