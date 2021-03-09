@@ -3,6 +3,20 @@ from dezero.core import Function
 from dezero.core import as_variable
 from dezero import utils
 
+class Exp(Function):
+    def forward(self, x):
+        y = np.exp(x)
+        return y
+
+    def backward(self, gy):
+        y = self.outputs[0]()  # weakref
+        gx = gy * y
+        return gx
+
+
+def exp(x):
+    return Exp()(x)
+    
 class Sin(Function):
   def forward(self, x):
     y = np.sin(x)
@@ -219,16 +233,3 @@ def sigmoid(x):
   return Sigmoid()(x)
 
 
-class Exp(Function):
-    def forward(self, x):
-        y = np.exp(x)
-        return y
-
-    def backward(self, gy):
-        y = self.outputs[0]()  # weakref
-        gx = gy * y
-        return gx
-
-
-def exp(x):
-    return Exp()(x)
