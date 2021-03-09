@@ -215,21 +215,23 @@ def linear(x, W, b=None):
   return Linear()(x,W,b)
   
 def sigmoid_simple(x):
-  x = as_variable(x)
-  y = 1 / (1 + exp(-x))
-  return y
-
-class Sigmoid(Function):
-  def forward(self, x):
-    y = 1 / (1 + np.exp(-x))
+    x = as_variable(x)
+    y = 1 / (1 + exp(-x))
     return y
 
-  def backward(self, gy):
-    y = self.outputs[0]()
-    gx = gy * y * (1-y)
-    return gx
+
+class Sigmoid(Function):
+    def forward(self, x):
+        # y = 1 / (1 + xp.exp(-x))
+        y = np.tanh(x * 0.5) * 0.5 + 0.5  # Better implementation
+        return y
+
+    def backward(self, gy):
+        y = self.outputs[0]()
+        gx = gy * y * (1 - y)
+        return gx
+
 
 def sigmoid(x):
-  return Sigmoid()(x)
-
+    return Sigmoid()(x)
 
