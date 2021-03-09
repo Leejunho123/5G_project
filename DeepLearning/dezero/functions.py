@@ -171,3 +171,50 @@ def mean_squared_error(x0, x1):
 def mean_squared_error_simple(x0, x1):
   diff = x0 - x1
   return F.sum(diff ** 2) / len(diff)
+
+def linear_simple(x, W, b=None):
+  t = matmul(x, W)
+  if b is None:
+    return t
+
+  y = t + b
+  t.data = None
+
+  return y
+
+class Linear(Function):
+  def forward(self, x, W, b):
+    y = x.dot(W)
+    if b is not None:
+      y += b
+
+    return y
+
+  def backward(self, gy):
+    x, W, b = self.inputs
+    gb = None if b.data is None else sum_to(gy, b.shape)
+    gx = matmul(gy, W.T)
+    gW = matmul(x.T, gy)
+    return gx, gW, gb
+
+def linear(x, W, b=None):
+  return Linear()(x,W,b)
+  
+def sigmoid_simple(x):
+  x = as_variable(x)
+  y = 1 / (1 + exp(-x))
+  return y
+
+class Sigmoid(Function):
+  def forward(self, x):
+    x = as_variable(x)
+    y = 1 / (1 + exp(-x))
+    return y
+
+  def backward(self, gy):
+    y = self.outputs[0]()
+    gx = gy * y * (1-y)
+    return gx
+
+def sigmoid(x):
+  return Sigmoid()(x)
