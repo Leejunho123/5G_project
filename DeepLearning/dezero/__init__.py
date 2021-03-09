@@ -18,4 +18,5 @@ else :
   from dezero.core import setup_variable
   from dezero.core import Parameter
   from dezero.layers import Layer
+  from dezero.models import Model
 setup_variable()
