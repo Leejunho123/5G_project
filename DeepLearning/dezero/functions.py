@@ -207,7 +207,8 @@ def sigmoid_simple(x):
 
 class Sigmoid(Function):
   def forward(self, x):
-    y = np.tanh(x * 0.5) * 0.5 + 0.5
+    x = as_variable(x)
+    y = 1 / (1 + np.exp(-x))
     return y
 
   def backward(self, gy):
