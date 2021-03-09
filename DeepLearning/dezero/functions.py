@@ -221,7 +221,8 @@ def sigmoid_simple(x):
 
 class Sigmoid(Function):
   def forward(self, x):
-    y = 1 / (1 + np.exp(-x))
+    x = -1*x
+    y = 1 / (1 + np.exp(x))
     return y
 
   def backward(self, gy):
