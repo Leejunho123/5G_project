@@ -19,3 +19,7 @@ class Dataset:
 
   def prepare(self):
     pass
+
+class Spiral(Dataset):
+  def prepare(self):
+    self.data, self.label = get_spiral(self.train)
