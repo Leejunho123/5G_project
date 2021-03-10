@@ -7,8 +7,8 @@ class Dataset:
     self.train = train
     self.transform = transform
     self.target_transform = target_transform
-    if self.tranform is None:
-      self.tranform = lambda x: x
+    if self.transform is None:
+      self.transform = lambda x: x
     if self.target_transform is None:
       self.target_transform = lambda x: x
 
