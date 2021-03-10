@@ -85,7 +85,7 @@ class DataLoader:
 
     self.reset()
 
-  def resert(self):
+  def reset(self):
     self.iteration = 0
     if self.shuffle:
       self.index = np.random.permutation(len(self.dataset))
