@@ -71,3 +71,8 @@
     + 팀 내 업무 : Yolov5 modeling, EfficientNet, PPT 발표 (알고리즘 소개~)
     + 상세 설명 : https://github.com/Leejunho123/5G_project/tree/main/XrayDetection
     + pdf :  https://github.com/Leejunho123/5G_project/blob/main/XrayDetection/X_ray_detection_%EC%B5%9C%EC%A2%85%EB%B0%9C%ED%91%9C.pdf
+  
+- Deep Learning from Scratch 3 / 밑바닥부터 시작하는 딥러닝3
+    + 기간 : 2021년 03월 02일 ~ 2021년 03월 12일 (2주)
+    + 밑바닥부터 시작하는 딥러닝 3 교재 공부 및 발표
+    + 딥러닝의 기본적인 방식 설명 및 코딩
